@@ -1,16 +1,24 @@
 Package: Rcoding
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Example Datasets and Exercises for R Coding Support
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Bob", "Verity",
+      email = "r.verity@imperial.ac.uk",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: This package provides synthetic datasets and supporting materials 
+    for the R Coding Support module in the School of Public Health, Imperial 
+    College London. The package is designed to accompany weekly problem sets, 
+    giving students direct access to example objects for practising R coding 
+    skills. Data include simulated epidemiological time series, patient line 
+    lists, and example analysis outputs, all tailored for use in teaching.
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.2
+Depends: R (>= 4.0.0)
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr

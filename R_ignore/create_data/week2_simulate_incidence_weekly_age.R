@@ -1,4 +1,4 @@
-# week1_simulate_incidence_weekly_age.R
+# week2_simulate_incidence_weekly_age.R
 #
 # Author: Bob Verity
 # Date: 2025-09-27

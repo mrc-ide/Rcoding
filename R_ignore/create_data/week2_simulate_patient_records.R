@@ -1,4 +1,4 @@
-# week1_simulate_patient_records.R
+# week2_simulate_patient_records.R
 #
 # Author: Bob Verity
 # Date: 2025-09-29
