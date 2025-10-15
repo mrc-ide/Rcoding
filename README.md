@@ -16,7 +16,7 @@ You can install the package directly from GitHub:
 remotes::install_github("mrc-ide/Rcoding@v1.0.0")
 ```
 
-Remember to set the specific version number you want using the @ symbol.
+When installing the package, remember to set the specific version number using the @ symbol, as shown above. This will ensure you're using the correct version for your teaching material.
 
 ## Available Data Objects
 

@@ -1,4 +1,4 @@
-# week2_simulate_smoking_analysis_list.R
+# simulate_smoking_analysis_list.R
 #
 # Author: Bob Verity
 # Date: 2025-09-29

@@ -88,3 +88,62 @@
 #'      smoking_analysis_list$data$lung_cancer_incidence)
 #' abline(smoking_analysis_list$fit, col = 2, lty = 2)
 "smoking_analysis_list"
+
+# ------------------------------------------------------------------
+#' Weekly prevalence data for two districts
+#'
+#' A synthetic dataset of weekly outbreak surveillance data from two districts.
+#' Each district has its own sample size, baseline prevalence, and coverage
+#' period, but both share an underlying seasonal pattern. Dates are represented
+#' only by year and ISO week (no calendar dates).
+#'
+#' @format A list with two elements, \code{A} and \code{B}, each a data frame with:
+#' \describe{
+#'   \item{year}{Calendar year (integer).}
+#'   \item{week}{ISO week number (1–52, integer).}
+#'   \item{tested_X}{Number of individuals tested (integer), where \code{X} is
+#'   \code{"A"} or \code{"B"} depending on the district.}
+#'   \item{cases_X}{Number of positive cases (integer), where \code{X} is
+#'   \code{"A"} or \code{"B"} depending on the district.}
+#' }
+#'
+#' @source Simulated for the Rcoding package (teaching example).
+#'
+#' @examples
+#' names(district_weekly_list)
+#' head(district_weekly_list$A)
+#' head(district_weekly_list$B)
+#' mean(district_weekly_list$A$cases_A / district_weekly_list$A$tested_A, na.rm = TRUE)
+"district_weekly_list"
+
+# ------------------------------------------------------------------
+#' Allele frequency matrix (loci × samples)
+#'
+#' A synthetic dataset of allele frequency estimates across multiple loci and
+#' samples. Values are simulated from per-locus base frequencies with added
+#' sample-level noise, then perturbed by artefacts and structured missingness to
+#' mimic realistic genetic data challenges.
+#'
+#' Rows correspond to loci (\code{"locus_0001"}, \code{"locus_0002"}, …);
+#' columns correspond to samples (\code{"sample_001"}, \code{"sample_002"}, …).
+#'
+#' Features include:
+#' \itemize{
+#'   \item True allele frequencies in the range (0,1), with variation across loci and samples.
+#'   \item Occasional negative values (< 0) introduced to represent artefacts from
+#'         lab-based normalisation/calibration errors.
+#'   \item Structured missingness: some loci fail across many samples, and some
+#'         samples fail across many loci, in addition to random background NAs.
+#' }
+#'
+#' @format A numeric matrix with 300 rows (loci) and 200 columns (samples).
+#' Row names are locus IDs; column names are sample IDs.
+#'
+#' @source Simulated for the \emph{Rcoding} package (teaching example).
+#'
+#' @examples
+#' dim(allele_freq_matrix)
+#' allele_freq_matrix[1:5, 1:5]
+#' sum(is.na(allele_freq_matrix))       # total missing values
+#' sum(allele_freq_matrix < 0, na.rm=TRUE)  # count of artefacts
+"allele_freq_matrix"
